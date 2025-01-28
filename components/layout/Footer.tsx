@@ -24,7 +24,7 @@ export default function Footer() {
                 </div>
               </div>
               <span className="text-xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                SEOBoost
+                Umair SEO
               </span>
             </div>
             <p className="text-blue-100/70 leading-relaxed">
