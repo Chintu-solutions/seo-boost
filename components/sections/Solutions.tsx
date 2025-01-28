@@ -1,5 +1,14 @@
 import React from "react";
-import { Podcast, Cloud, Link, Globe2, Building, Shield } from "lucide-react";
+import {
+  Podcast,
+  Cloud,
+  Link,
+  Globe2,
+  Building,
+  Shield,
+  ArrowRight,
+} from "lucide-react";
+import Image from "next/image";
 
 const services = [
   {
@@ -9,6 +18,7 @@ const services = [
       "High-authority backlinks from popular podcast platforms and directories",
     gradient: "from-purple-500 to-pink-500",
     delay: 0,
+    bgImage: "/podcast-bg.jpg", // Add background image for podcasts
   },
   {
     icon: Cloud,
@@ -17,6 +27,7 @@ const services = [
       "Premium backlinks from trusted cloud service platforms and repositories",
     gradient: "from-blue-500 to-purple-500",
     delay: 100,
+    bgImage: "/cloud-bg.jpg", // Add background image for cloud platforms
   },
   {
     icon: Link,
@@ -25,6 +36,7 @@ const services = [
       "Strategic backlinks using Google's own properties for maximum impact",
     gradient: "from-red-500 to-orange-500",
     delay: 200,
+    bgImage: "/google-bg.jpg", // Add background image for Google stack
   },
   {
     icon: Globe2,
@@ -33,6 +45,7 @@ const services = [
       "Build authoritative local citations to dominate regional searches",
     gradient: "from-green-500 to-teal-500",
     delay: 300,
+    bgImage: "/local-bg.jpg", // Add background image for local citations
   },
   {
     icon: Building,
@@ -41,6 +54,7 @@ const services = [
       "Create and optimize high-authority business profile backlinks",
     gradient: "from-blue-500 to-cyan-500",
     delay: 400,
+    bgImage: "/business-bg.jpg", // Add background image for business profiles
   },
   {
     icon: Shield,
@@ -49,6 +63,7 @@ const services = [
       "Monitor and maintain your backlink profile for long-term authority",
     gradient: "from-indigo-500 to-purple-500",
     delay: 500,
+    bgImage: "/brand-bg.jpg", // Add background image for brand protection
   },
 ];
 
@@ -84,18 +99,33 @@ export default function Solutions() {
           {services.map((service, index) => (
             <div
               key={index}
-              className="group relative"
+              className="group relative h-[400px]"
               style={{
                 animationDelay: `${service.delay}ms`,
               }}
             >
+              {/* Background Image */}
+              <div className="absolute inset-0 rounded-lg overflow-hidden">
+                <Image
+                  src={service.bgImage}
+                  alt={service.title}
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+              </div>
+
+              {/* Gradient Overlay */}
+              <div
+                className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-60 rounded-lg`}
+              />
+
               {/* Card Gradient Border */}
               <div
                 className={`absolute -inset-0.5 bg-gradient-to-r ${service.gradient} rounded-lg blur opacity-30 group-hover:opacity-100 transition duration-300`}
               />
 
               {/* Card Content */}
-              <div className="relative h-full bg-slate-900/90 backdrop-blur-xl p-8 rounded-lg flex flex-col">
+              <div className="relative h-full backdrop-blur-sm p-8 rounded-lg flex flex-col justify-between z-10">
                 {/* Icon with gradient background */}
                 <div className="relative w-16 h-16 mb-6">
                   <div
@@ -106,16 +136,26 @@ export default function Solutions() {
                   </div>
                 </div>
 
-                {/* Title and Description */}
-                <h3 className="text-xl font-bold text-white mb-3">
-                  {service.title}
-                </h3>
-                <p className="text-blue-100/70 group-hover:text-blue-100 transition-colors duration-300">
-                  {service.description}
-                </p>
+                <div>
+                  {/* Title and Description */}
+                  <h3 className="text-2xl font-bold text-white mb-3">
+                    {service.title}
+                  </h3>
+                  <p className="text-white/90 text-lg group-hover:text-white transition-colors duration-300">
+                    {service.description}
+                  </p>
+                </div>
 
-                {/* Hover Effect Overlay */}
-                <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-blue-500/0 via-purple-500/0 to-pink-500/0 opacity-0 group-hover:opacity-10 transition duration-300" />
+                {/* Learn More Button */}
+                <div className="mt-6">
+                  <button className="group/btn relative px-6 py-2 rounded-full overflow-hidden">
+                    <div className="absolute inset-0 bg-white/10 group-hover/btn:bg-white/20 transition-colors duration-300" />
+                    <span className="relative flex items-center gap-2 text-white">
+                      Learn More
+                      <ArrowRight className="h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
+                    </span>
+                  </button>
+                </div>
               </div>
             </div>
           ))}
