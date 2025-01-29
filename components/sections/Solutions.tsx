@@ -1,3 +1,4 @@
+import Links from 'next/link';
 import React from "react";
 import {
   Podcast,
@@ -160,13 +161,13 @@ export default function Solutions() {
 
                 {/* Learn More Button */}
                 <div className="mt-6 transform translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                  <button className="group/btn relative w-full px-6 py-3 rounded-full overflow-hidden">
-                    <div className="absolute inset-0 bg-white/10 group-hover/btn:bg-white/20 transition-colors duration-300" />
-                    <span className="relative flex items-center justify-center gap-2 text-white font-medium">
-                      Learn More
-                      <ArrowRight className="h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
-                    </span>
-                  </button>
+                <Links href="/portfolio" className="group/btn relative w-full px-6 py-3 rounded-full overflow-hidden">
+  <div className="absolute inset-0 bg-white/10 group-hover/btn:bg-white/20 transition-colors duration-300" />
+  <span className="relative flex items-center justify-center gap-2 text-white font-medium">
+    Learn More
+    <ArrowRight className="h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
+  </span>
+</Links>
                 </div>
               </div>
             </div>
