@@ -57,28 +57,53 @@ const caseStudies = [
   },
   {
     id: 3,
-    title: "Umair Store",
-    industry: "Fashion Retail",
-    duration: "3 months",
-    image: "/case-study-2.jpg",
+    title: "A.Moses & Sons Ltd",
+    industry: "Construction Equipment",
+    duration: "3 to 6 months",
+    image: "/A.Moses & Sons Ltd.webp",
     challenge:
-      "New online store struggling to gain sales in a competitive market with no established domain authority.",
+      "A.Moses & Sons Ltd is a Home Products Store. We followed a specific marketing strategy with focus on key services to overcome the competition and successfully ranked many profitable keywords on Google Page 1.",
     solution: [
       "Strategic podcast appearances",
       "Authority site backlinks",
-      "Social profile optimization",
       "Industry directory listings",
     ],
     results: {
-      backlinks: "+320%",
-      traffic: "+245%",
-      rankings: "Top 5",
-      roi: "280%",
+      backlinks: "+120%",
+      traffic: "+105%",
+      rankings: "Top 3",
+      roi: "100%",
     },
     testimonial: {
       text: "Within months, our organic traffic skyrocketed and our conversion rates improved significantly.",
       author: "Adnan Ajmal",
       position: "Marketing Director",
+    },
+  },
+  {
+    id: 4,
+    title: "MRG Appartments",
+    industry: "Property & Rental service",
+    duration: "6+ months",
+    image: "MRG Appartments.webp",
+    challenge:
+      "MRG Appartments is a Property & Rental service Provider. We followed a specific marketing strategy with focus on key services to overcome the competition and successfully ranked many profitable keywords on Google Page 1.",
+    solution: [
+      "Implemented podcast outreach strategy",
+      "Created Google stack properties",
+      "Built high-authority local citations",
+      "Developed cloud platform backlinks",
+    ],
+    results: {
+      backlinks: "+70%",
+      traffic: "+185%",
+      rankings: "Top 5",
+      roi: "95%",
+    },
+    testimonial: {
+      text: "The off-page SEO strategy transformed our online presence. Our reservations have doubled since implementing these changes.",
+      author: "John Smith",
+      position: "Owner",
     },
   },
 ];
@@ -99,7 +124,7 @@ export default function CaseStudies() {
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold mb-6">
             <span className="bg-gradient-to-r from-blue-200 via-blue-100 to-white bg-clip-text text-transparent">
-              Client Success
+            Success Stories
             </span>
             <br />
             <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -132,13 +157,14 @@ export default function CaseStudies() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Image Section */}
           <div className="relative group">
-            <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-lg blur opacity-20 group-hover:opacity-30 transition duration-300" />
+            <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-lg blur opacity-50 group-hover:opacity-50 transition duration-300" />
             <div className="relative aspect-video overflow-hidden rounded-lg">
               <Image
                 src={activeCase.image}
                 alt={activeCase.title}
-                fill
-                className="object-cover"
+                className="object-contain"
+                height={700}
+                width={700}
                 priority
               />
             </div>

@@ -73,7 +73,7 @@ export default function Footer() {
           </div>
 
           {/* Company Section */}
-          <div>
+          {/* <div>
             <h4 className="text-lg font-semibold mb-6 bg-gradient-to-r from-blue-200 to-purple-200 bg-clip-text text-transparent">
               Company
             </h4>
@@ -92,7 +92,7 @@ export default function Footer() {
                 )
               )}
             </ul>
-          </div>
+          </div> */}
 
           {/* Contact Section */}
           <div>
@@ -112,15 +112,15 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="skype:username"
+                  href="https://www.facebook.com/iumairanwarr"
                   className="text-blue-100/70 hover:text-white transition-colors duration-300"
                 >
-                  Skype: @username
+                  Facebook
                 </a>
               </li>
               <li>
                 <a
-                  href="https://linkedin.com/in/"
+                  href="https://www.linkedin.com/in/umair-anwar-local-seo-outreaching-expert/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-blue-100/70 hover:text-white transition-colors duration-300"
@@ -136,7 +136,7 @@ export default function Footer() {
         <div className="mt-16 pt-8 border-t border-blue-200/10">
           <div className="text-center">
             <p className="text-blue-100/60">
-              &copy; {new Date().getFullYear()} SEOBoost. All rights reserved.
+              &copy; {new Date().getFullYear()} <a href="https://www.linkedin.com/in/umair-anwar-local-seo-outreaching-expert/">Umair SEO</a>. All rights reserved.
             </p>
           </div>
         </div>
