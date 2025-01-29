@@ -102,7 +102,7 @@ export default function Contact() {
                   <div className="absolute -inset-2 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full opacity-20 group-hover:opacity-40 blur-sm transition duration-300" />
                   <Mail className="relative h-6 w-6 text-blue-400" />
                 </div>
-                <span className="text-blue-100">contact@seoboost.com</span>
+                <span className="text-blue-100">iumairanwarr@gmail.com</span>
               </a>
             </div>
           </div>
